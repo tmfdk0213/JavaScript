@@ -1,6 +1,4 @@
-let x = 100;
+var x = 10;
+var y = 20;
 
-// 1000줄이 코드
-
-console.log(x); // 10이 출력이 되기를 기대하면 안됩니다.
-console.log(y);
+x = x + 10;
