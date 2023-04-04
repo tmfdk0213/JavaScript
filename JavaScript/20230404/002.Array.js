@@ -214,5 +214,26 @@ const tip8 = Array.from("hello world");
 
 // '.'.repeat(100).split('.') // 권하진 않습니다.
 
+let tip9 = [1, 2, 3, 4, 5];
+console.log([tip9.slice(0, 2), 1000, tip9.slice(2, 5)]);
+console.log([...tip9.slice(0, 2), 1000, ...tip9.slice(2, 5)]);
+
+let tip10 = [1, 2, 3, 4, 5];
+tip10.splice(2, 0, 1000);
+tip10;
+
+const arr = [1, 2, 3, 4, 5];
+// arr.forEach(함수)
+// 함수(callbackfn): (value: number, index: number, array: number[]
+arr.forEach(function (item, index) {
+  console.log(item);
+});
+
+const arr = [10, 20, 30, 40, 50];
+// arr.forEach(함수)
+// 함수(callbackfn): (value: number, index: number, array: number[]
+arr.forEach(function (item, index) {
+  console.log(index, item);
+});
 // map하고 다시 오겠습니다.
 // const tip9 = Array(100).fill(0).map
