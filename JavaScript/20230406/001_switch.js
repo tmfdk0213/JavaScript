@@ -76,7 +76,7 @@ switch (new Date().getDay()) {
     break;
   // default는 견고한 코드를 위해 써주시는 편이 좋습니다.
 }
-//단축키
+
 // 여러줄 복사하고 싶을 때에
 // window : Alt + Shift + 위아래
 // mac : option키와 shift키 누르고 방향키
@@ -96,11 +96,13 @@ switch (new Date().getDay()) {
 // 전체 줄 선택
 // window : 컨트롤 L 커서 있는 줄 전체선택
 // mac : shift + cmd + left, cmd + opt + l // 안되는 분도 있으십니다.
-// cd 폴더명 : 파일위치 이동 (cd 폴더명/폴더명 하면 두단계 이동 가능)
-// cd .. : 전 상위 폴더 이동
-// mkdir 폴더명 : 폴더 생성
-// touch 파일명 파일명 : 파일 생성
-// ls : 현재 폴더 파일 목록
+
+// 되돌리는 단축키(되돌리기, 되돌리기에 되돌아가기)
+// window : Ctrl + z, Ctrl + y(Ctrl + Shift + z)
+// mac : cmd + z, cmd shift z
+
+// 잘라내기
+// 한 줄 잘라내기  ctrl + x / 한 줄 삭제: ctrl + shift + k
 
 switch (value3) {
   case "one":
@@ -113,7 +115,7 @@ switch (value3) {
     console.log("hello default");
 }
 
-// 다른 언어에서 switch문 어떻게 사용할까요? python은 switch문 없는데?
+// 다른 언어에서 switch문 어떻게 사용할까요? python은 switch문 없는데? JavaScript는 아래 문법 대신 switch 문을 사용합니다.
 
 const 요일 = new Date().getDay();
 const 요일객체 = {
@@ -142,5 +144,7 @@ const 요일객체2 = {
 
 // 널리쉬 연산자 사용
 console.log(요일객체2[요일2] ?? "hello");
+console.log(undefined ?? "hello");
 // 단락평가 사용
 console.log(요일객체2[요일2] || "hello");
+console.log(undefined || "hello");

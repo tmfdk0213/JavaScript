@@ -7,6 +7,21 @@ while (x < 10) {
 }
 
 /////
+// why? 10까지 출력이 되는가?
+let x = 0;
+while (x < 10) {
+  console.log(x);
+  x += 1;
+}
+
+let x = 0;
+while (x < 10) {
+  console.log(x);
+  x += 1;
+  console.log("");
+}
+
+/////
 
 let input;
 
