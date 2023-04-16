@@ -10,9 +10,15 @@
   <body>
     <h1></h1>
     <script>
-      const a = prompt("첫 번째 숫자를 입력해주세요 ");
+      //const를 쓰면 오류발생
+      //상수에 다시 할당하는 일을 하기때문에 오류가 발생
+      //let으로 바꿔줌
+      //prompt 결과 -> Number(a) -> a
+      //const사용하려면
+      //const a = Number(prompt('첫 번째 숫자를 입력해주세요.'))
+      let a = prompt("첫 번째 숫자를 입력해주세요 ");
       a = Number(a);
-      const b = prompt("두 번째 숫자를 입력해주세요 ");
+      let b = prompt("두 번째 숫자를 입력해주세요 ");
       b = Number(b);
 
       alert(`${a} + ${b} = ${a + b}`);

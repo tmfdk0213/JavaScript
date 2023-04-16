@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <h1></h1>
+    <script>
+            //   if (273 < 100) {
+            //     alert("273<100 => true");
+            //   }
+            //   alert("종료");
+
+            const date = new Date();
+            const hours = date.getHours();
+
+            if (hours < 12) {
+              alert(`현재시간은 ${hours}시로 오전입니다`);
+            }
+
+            if (hours >= 12) {
+              alert(`현재시간은 ${hours}시로 오후입니다`);
+            }
+
+            `오전 10시 이전 "아침밥 먹을 시간입니다"
+               오전 10시 ~ 오후 4시 "점심밥 먹을 시간입니다"
+               오후 4시 이후 "저녁밥 먹을 시간입니다" `;
+
+            //  const hours = new Date().getHours();
+            //  if (hours < 10) {
+            //    alert("아침밥 먹을 시간입니다.");
+            //  }
+            //  if (10 <= hours && hours < 16) {
+            //    alert("점심밥 먹을 시간입니다.");
+            //  }
+            //  if ((hours) => 16) {
+            //    alert("저녁밥 먹을 시간입니다.");
+            //  }
+
+            const hours = new Date().getHours();
+            if (hours < 10) {
+              alert("아침밥 먹을 시간입니다.");
+            } else if (hours < 16) {
+              alert("점심밥 먹을 시간입니다");
+            } else {
+              alert("저녁밥 먹을 시간입니다.");
+            }
+
+            const a = Number(prompt("숫자를 입력해주세요", ""));
+            if (a > 0) {
+              alert("양수입니다");
+            } else if (a === 0) {
+              alert("0입니다");
+              //같다는 ===
+            } else {
+              alert("음수입니다");
+            }
+            //FullYear: 올해(ex:2023)
+            //Month: 월(ex: 0~11) = 1월은 0으로 표기
+            //Data: 일(ex: 1~31) =1일은 1로 표기
+            //Hours: 시간(ex: 0~23)
+
+            //계절을 구분하는 프로그램
+            const month = (new Date()).getMonth() + 1
+            //봄
+            if (3 <= month && month <= 5){
+              alert('봄입니다!')
+            }
+            //여름
+            if(6 <= month && month <= 8){
+      alert('여름입니다')
+            }
+            //가을
+            if(9 <= month && month <= 11){
+              alert('가을입니다')
+            }
+            //겨울
+            if (1 <= month && month <= 2) || (month == 2){
+              alert('겨울입니다')
+            }
+    </script>
+  </body>
+</html>
