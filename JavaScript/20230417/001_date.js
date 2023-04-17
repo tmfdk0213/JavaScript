@@ -103,7 +103,7 @@ const ampm = hour >= 12 ? "PM" : "AM";
 function getDateDiff(d1, d2) {
   const date1 = new Date(d1);
   const date2 = new Date(d2);
-  const diffDate = date1.getTime() - date2.getTime();
+  const diffDate = Math.abs(date1.getTime() - date2.getTime());
   // 일 == 밀리세컨 * 초 * 분 * 시
   return Math.abs(diffDate / (1000 * 60 * 60 * 24));
 }
