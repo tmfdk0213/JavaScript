@@ -1,4 +1,3 @@
-//set 은 집합,교집합,차집합,여집합
 // 집합, 합집합, 교집합, 차집합
 // 실무에서는 많이 사용이 안되지만
 // 알고리즘 문제에서는 거의 필수로 사용되는 자료형입니다.
@@ -124,4 +123,21 @@ function solution(order) {
   return String(order) // '29423'
     .split("") // ['2', '9', '4', '2', '3']
     .filter((num) => mySet.has(parseInt(num))).length;
+}
+
+// https://school.programmers.co.kr/learn/courses/30/lessons/120852
+function solution(n) {
+  let answer = [];
+
+  let i = 2;
+  while (i <= n) {
+    if (n % i === 0) {
+      answer.push(i);
+      n = n / i;
+    } else {
+      i++;
+    }
+  }
+
+  return [...new Set(answer.sort((a, b) => (a > b ? 1 : -1)))];
 }
