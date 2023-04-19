@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const 입력 = Number(prompt("태어난 해를 입력해주세요.", "")) % 12;
+      if (입력 === 0) {
+        alert("원숭이띠입니다.");
+      } else if (입력 === 1) {
+        alert("닭띠입니다.");
+      } else if (입력 === 2) {
+        alert("개띠입니다.");
+      } else if (입력 === 3) {
+        alert("돼지띠입니다.");
+      } else if (입력 === 4) {
+        alert("쥐띠입니다.");
+      } else if (입력 === 5) {
+        alert("소띠입니다.");
+      } else if (입력 === 6) {
+        alert("호랑이띠입니다.");
+      } else if (입력 === 7) {
+        alert("토끼띠입니다.");
+      } else if (입력 === 8) {
+        alert("용띠입니다.");
+      } else if (입력 === 9) {
+        alert("뱀띠입니다.");
+      } else if (입력 === 10) {
+        alert("말띠입니다.");
+      } else if (입력 === 11) {
+        alert("양띠입니다.");
+      }
+    </script>
+    <!-- <script>
+        //switch이용하기
+        const rawInput = prompt('태어난 해를 입력해주세요.', '')
+        const year = Number(rawInput)
+        const e = year % 12
+        
+        let result
+      switch(e) {
+        case 0:
+            result ='원숭이'; break;
+            case 1:
+            result ='닭'; break;
+            case 2:
+            result ='개'; break;
+            case 3:
+            result ='돼지'; break;
+            case 4:
+            result ='쥐'; break;
+            case 5:
+            result ='소'; break;
+
+            case 6:
+            result ='호랑이'; break;
+            case 7:
+            result ='토끼'; break;
+            case 8:
+            result ='용'; break;
+            case 9:
+            result ='뱀'; break;
+            case 10:
+            result ='말'; break;
+            case 11:
+            result ='양'; break;
+      }
+      alert(`${year}년에 태어났다면 ${result} 띠입니다.`)
+    </script> -->
+
+    //152p 예제3
+    <script>
+      const rawInput = prompt('태어난 해를 입력해주세요.', '')
+      const year = Number(rawInput)
+
+      let result1
+      const el = year % 12
+      if (e1 === 0) |{result = '신'}
+      else if (e1 === 1) {result = '유'}
+      else if (e1 === 2) {result = '술'}
+      else if (e1 === 3) {result = '해'}
+      else if (e1 === 4) {result = '자'}
+      else if (e1 === 5) {result = '축'}
+      else if (e1 === 6) {result = '인'}
+      else if (e1 === 7) {result = '묘'}
+      else if (e1 === 8) {result = '진'}
+      else if (e1 === 9) {result = '사'}
+      else if (e1 === 10) {result = '오'}
+      else if (e1 === 11) {result = '미'}
+
+      let result2
+      const e2 = year % 10
+      if (e2 === 0) |{result = '경'}
+      else if (e2 === 1) {result = '신'}
+      else if (e2 === 2) {result = '임'}
+      else if (e2 === 3) {result = '계'}
+      else if (e2 === 4) {result = '갑'}
+      else if (e2 === 5) {result = '을'}
+      else if (e2 === 6) {result = '병'}
+      else if (e2 === 7) {result = '정'}
+      else if (e2 === 8) {result = '무'}
+      else if (e2 === 9) {result = '기'}
+    </script>
+  </body>
+</html>
