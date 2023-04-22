@@ -78,32 +78,34 @@
       const year = Number(rawInput)
 
       let result1
-      const el = year % 12
-      if (e1 === 0) |{result = '신'}
-      else if (e1 === 1) {result = '유'}
-      else if (e1 === 2) {result = '술'}
-      else if (e1 === 3) {result = '해'}
-      else if (e1 === 4) {result = '자'}
-      else if (e1 === 5) {result = '축'}
-      else if (e1 === 6) {result = '인'}
-      else if (e1 === 7) {result = '묘'}
-      else if (e1 === 8) {result = '진'}
-      else if (e1 === 9) {result = '사'}
-      else if (e1 === 10) {result = '오'}
-      else if (e1 === 11) {result = '미'}
+      const e1 = year % 12
+      if      (e1 === 0) {result1 = '신'}
+      else if (e1 === 1) {result1 = '유'}
+      else if (e1 === 2) {result1 = '술'}
+      else if (e1 === 3) {result1 = '해'}
+      else if (e1 === 4) {result1 = '자'}
+      else if (e1 === 5) {result1 = '축'}
+      else if (e1 === 6) {result1 = '인'}
+      else if (e1 === 7) {result1 = '묘'}
+      else if (e1 === 8) {result1 = '진'}
+      else if (e1 === 9) {result1 = '사'}
+      else if (e1 === 10) {result1 = '오'}
+      else if (e1 === 11) {result1 = '미'}
 
       let result2
       const e2 = year % 10
-      if (e2 === 0) |{result = '경'}
-      else if (e2 === 1) {result = '신'}
-      else if (e2 === 2) {result = '임'}
-      else if (e2 === 3) {result = '계'}
-      else if (e2 === 4) {result = '갑'}
-      else if (e2 === 5) {result = '을'}
-      else if (e2 === 6) {result = '병'}
-      else if (e2 === 7) {result = '정'}
-      else if (e2 === 8) {result = '무'}
-      else if (e2 === 9) {result = '기'}
+      if      (e2 === 0) {result2 = '경'}
+      else if (e2 === 1) {result2 = '신'}
+      else if (e2 === 2) {result2 = '임'}
+      else if (e2 === 3) {result2 = '계'}
+      else if (e2 === 4) {result2 = '갑'}
+      else if (e2 === 5) {result2 = '을'}
+      else if (e2 === 6) {result2 = '병'}
+      else if (e2 === 7) {result2 = '정'}
+      else if (e2 === 8) {result2 = '무'}
+      else if (e2 === 9) {result2 = '기'}
+
+      alert(`${year}년은 ${result2}${result1} 띠입니다.`)
     </script>
   </body>
 </html>
