@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "omyu_pretty";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "omyu_pretty";
+}
+body {
+  background: rgb(185, 222, 243);
+}
+
+.memotitle {
+  color: rgb(72, 122, 97);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 400px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  background: rgb(238, 226, 169);
+  display: block;
+  width: 400px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.m-btn {
+  background: rgb(238, 226, 169);
+  display: block;
+  width: 206px;
+  height: 30px;
+  border-radius: 30px 30px;
+  margin: auto;
+  margin-top: 50px;
+}
+.wrapper {
+  display: block;
+  width: 300px;
+  margin-top: -190px;
+  margin-left: 50px;
+  justify-content: left;
+}
+.inputField {
+  width: 400px;
+  height: 40px;
+}
+.inputField input {
+  color: rgb(224, 185, 241);
+}
+.inputField button {
+  width: 30px;
+  height: 20px;
+}
+.todolist-li {
+  list-style: none;
+}
