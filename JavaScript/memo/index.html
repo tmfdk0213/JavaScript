@@ -6,35 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link href="style.css" rel="stylesheet" />
+    <script src="memo.js"></script>
 
   <body>
+   
     <main>
       <h1 class="memotitle">메모지✏️</h1>
       <section>
-        <input type="text" name="" id="title" />
+        <input class="inputTxt" type="text" name="" id="title" />
         <textarea name="" id="content" cols="30" rows="10"></textarea>
         <button class="m-btn" onclick="saveNote()">Memo</button>
       </section>
       <section id="display"></section>
     </main>
     <!-- TodoList -->
-   <div class="wrapper">
+<div class="wrapper">
+  <section >
     <h2>To Do List</h2>
-    <article class="inputField">
-      <input type="text" id="addValue" placeholder="To do List" autofocus>
-      <button type="button" id="btn" onclick="addTodo()">+<div class="xi-plus xi-2x">
-    </article>
-  </div>
-  <div>
-    <ul id="addTodo" class="ToDolist">
-      <li class="todolist-li"><div id='result'></div></li>
-    </ul>
-  </div>
-     <article class="footer">
-      <button type="button" id="allClear" onclick="allClearList()">-</button>
-     </article>
-   </div>
+  </section>
+<section class="listbox">
+    <input class="inputTxt2" type="text" id="inputBox" placeholder="To Do List" style="border:0 solid black"></input>
+    <button class="add" id="addButton">+</button>
+    <div id="List"></div>
 
+     </section>
+</div>
+  
     <script>
       let allMemo = JSON.parse(localStorage.getItem("allMemo"));
       allMemo = allMemo ?? [];
@@ -93,8 +90,32 @@
         render();
       }
 
-     
+const inputBox = document.getElementById("inputBox");
+const addBtn = document.getElementById("addButton");
+const toDoList = document.getElementById("List");
+
+addBtn.addEventListener("click", function () {
+  const list = document.createElement("li");
+
+  if(!inputBox.value)
+  alert('내용을 입력해주세요');
+  else{  
+  list.innerText = inputBox.value;
+  toDoList.appendChild(list);
+  inputBox.value = "";
+}
+  list.addEventListener("click", function () {
+    list.style.textDecoration = "line-through";
+
+  });
+
+  list.addEventListener("dblclick", function () {
+    toDoList.removeChild(list);
+  });
+});
+
+      
     </script>
-     <script src="./memo.js"></script>
+
   </body>
 </html>

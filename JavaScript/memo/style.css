@@ -46,24 +46,79 @@ textarea {
   margin: auto;
   margin-top: 50px;
 }
-.wrapper {
-  display: block;
-  width: 300px;
-  margin-top: -190px;
-  margin-left: 50px;
-  justify-content: left;
+.Todo {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
 }
-.inputField {
-  width: 400px;
+h1 {
+  text-align: center;
+}
+.inputTxt {
+  width: 395px;
+  height: 30px;
+  outline: 0;
+  border: none;
+  font-size: 1.5em;
+  background: white;
+  margin-right: 10px;
+  padding: 5px;
+}
+button {
+  width: 85px;
   height: 40px;
+  font-size: 1.5em;
+  outline: 0;
+  border: none;
 }
-.inputField input {
-  color: rgb(224, 185, 241);
+.todolist {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px 40px 10px 0px;
 }
-.inputField button {
-  width: 30px;
-  height: 20px;
-}
-.todolist-li {
+ul {
   list-style: none;
+}
+li {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 1.3em;
+}
+a {
+  float: right;
+  text-align: right;
+  color: red;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.delete {
+  background-color: yellow;
+  text-align: center;
+  padding: 0px 4px 0px 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.wrapper {
+  margin-top: -500px;
+  margin-left: 300px;
+}
+
+.inputTxt2 {
+  outline: 0px;
+  color: rgb(107, 107, 107);
+  width: 220px;
+  height: 30px;
+  padding: 5px;
+}
+
+.add {
+  width: 40px;
+  height: 30px;
+  margin-left: 193px;
+}
+.List {
 }
