@@ -20,14 +20,15 @@ class VendingMachineEvents {
   //장바구니 콜라 생성 함수
   stagedItemGenerator(target) {
     const stagedItem = document.createElement("li");
-
+    stagedItem.dataset.item = target.dataset.item;
+    stagedItem.dataset.price = target.dataset.price;
     stagedItem.innerHTML = `
-        <img src="./img/${target.dataset.img}" alt="">
-            ${target.dataset.item}
-        <strong>1
-            <span class="a11y-hidden">개</span>
-        </strong>
-        `;
+      <img src="./img/${target.dataset.img}" alt="">
+          ${target.dataset.item}
+      <strong>1
+          <span class="a11y-hidden">개</span>
+      </strong>
+      `;
     this.stagedList.append(stagedItem);
   }
 
@@ -103,6 +104,7 @@ class VendingMachineEvents {
           this.balance.textContent.replaceAll(",", "")
         );
         const targetElPrice = parseInt(event.currentTarget.dataset.price);
+        const stagedListitem = this.stagedList.querySelectorAll("li");
 
         if (balanceVal >= targetElPrice) {
           this.balance.textContent =
@@ -110,6 +112,15 @@ class VendingMachineEvents {
 
           //장바구니 콜라 생성
           this.stagedItemGenerator(event.currentTarget);
+          for (const item of stagedListitem) {
+            // 클릭한 콜라의 이름과 장바구니에 있던 콜라의 이름이 같은지 비교!
+            if (event.currentTarget.dataset.item === item.dataset.item) {
+              // console.log(item.querySelector('strong').firstChild);
+              item.querySelector("strong").firstChild.textContent =
+                parseInt(item.querySelector("strong").firstChild.textContent) +
+                1;
+            }
+          }
         } else {
           alert("입금한 금액이 부족합니다.");
         }
