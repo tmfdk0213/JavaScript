@@ -1,0 +1,1 @@
+npx create-react-app 생성폴더명 --template basic-react     
