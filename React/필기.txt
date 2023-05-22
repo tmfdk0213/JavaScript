@@ -1,1 +1,5 @@
 npx create-react-app 생성폴더명 --template basic-react     
+
+
+리덕스
+npx create-react-app vanilla-redux --template basic-react 
